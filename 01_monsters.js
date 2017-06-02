@@ -30,35 +30,43 @@
     //@see https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
     'use strict';
 
-    ///////////////////////////
-    // Put your code here!
-    ///////////////////////////
 
-    
-    //The code below should work when you are done
+    function LivingThing(thingname, thinghealth){
+        this.name = thingname;
+        this.health = thinghealth;
+    }
+
+    let LivingThing1 = new LivingThing("Rat", 5);
+    let LivingThing2 = new LivingThing("Goblin", 30);
+    let LivingThing3 = new LivingThing("Ogre", 80);
+
+    console.log(LivingThing1.name, LivingThing1.health);
+    console.log(LivingThing2.name, LivingThing2.health);
+    console.log(LivingThing3.name, LivingThing3.health);
+
+
+
+    // //The code below should work when you are done
     console.log("Monsters!");
-
-    //for...of loop supported in ES6
-    //not compatable before IE edge
-    //@see http://www.benmvp.com/learning-es6-for-of-loop/
-    //@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+    //
+    // //for...of loop supported in ES6
+    // //not compatable before IE edge
+    // //@see http://www.benmvp.com/learning-es6-for-of-loop/
+    // //@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
     console.log("ES6 for...in");
-    for (let monster of monsters) {
-        console.log(monster.name + ": " + monster.health);
+    let monsters = [LivingThing1, LivingThing2, LivingThing3];
+     for (let monster of monsters) {
+      console.log(monster.name + " : " + monster.health);
     }
-
-    //just a spacer
-    console.log("===================");
-
-    //for loop loop supported before ES6
-    //@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-    console.log("for loop for support before ES6");
-    for (let i=0; i < monsters.length; i++) {
-        console.log(monsters[i].name + ": " + monsters[i].health);
-    }
+    //
+    // //just a spacer
+    // console.log("===================");
+    //
+    // //for loop loop supported before ES6
+    // //@see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+    // console.log("for loop for support before ES6");
+    // for (let i=0; i < monsters.length; i++) {
+    //     console.log(monsters[i].name + ": " + monsters[i].health);
+    // }
 
 })();
-    
-
-
-    
